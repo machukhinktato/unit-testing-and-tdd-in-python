@@ -3,7 +3,7 @@ import pytest
 
 # function which we build with ttd
 def fizzBuzz(value, expected):
-    if (value % 3 == 0) or value == 5:
+    if (value % 3 == 0) or (value % 5 == 0) or value == (3*5):
         return expected
     return str(value)
 
@@ -25,23 +25,31 @@ def test_functionAnswer():
 
 
 #test that we receive any value by result of calling
-# @pytest.mark.skip
+@pytest.mark.skip
 def test_functionAnswer_v2():
     checkFizzBuzz(2, '2')
 
 
 #test that we receive any value by result of calling, including string name
-# @pytest.mark.skip
+@pytest.mark.skip
 def test_functionAnswer_v3():
     checkFizzBuzz(3, 'fuzz')
 
 
 #another one example of that
-# @pytest.mark.skip
+@pytest.mark.skip
 def test_functionAnswer_v4():
     checkFizzBuzz(5, 'buzz')
 
 
-# @pytest.mark.skip
+@pytest.mark.skip
 def test_functionAnswer_v5():
     checkFizzBuzz(6, 'fuzz')
+
+@pytest.mark.skip
+def test_functionAnswer_v6():
+    checkFizzBuzz(10, 'buzz')
+
+# @pytest.mark.skip
+def test_functionAnswer_v6():
+    checkFizzBuzz(15, 'fizzBuzz')
