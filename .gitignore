@@ -1,5 +1,5 @@
-/section_5/__pycache__
-/section_5/pytest_cache
+/section_5/__pycache__/
+/section_5/.pytest_cache/
 /venv
-/pytest_cache
+/.pytest_cache
 /__pycache__
