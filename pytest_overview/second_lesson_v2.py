@@ -45,5 +45,5 @@ Executing test1
 Setting up test2
 Executing test2
 .Tearing down test2
-Teardown TestClass
+Teardown TestClassmy
 """
