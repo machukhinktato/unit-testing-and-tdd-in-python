@@ -7,10 +7,15 @@ def test_CanInstantiateCheckout():
     co = Checkout()
 """
 
-def test_CanAddItemPrice():
-    co = Checkout()
-    co.addItemPrice('a', 1)
+@pytest.fixture
+def checkout():
+    checkout = Checkout()
+    return checkout
 
-def test_CanAddItem():
-    co = Checkout()
-    co.addItem('a')
+def test_CanAddItemPrice(checkout):
+    # co = Checkout()
+    checkout.addItemPrice('a', 1)
+
+def test_CanAddItem(checkout):
+    # co = Checkout()
+    checkout.addItem('a')
