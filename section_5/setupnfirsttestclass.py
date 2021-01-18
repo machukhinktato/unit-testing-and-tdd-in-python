@@ -41,10 +41,14 @@ def test_getCorretTotalWithMultipleItems(checkout):
 def test_canAddDiscountRule(checkout):
     checkout.addDiscount('a', 3, 2)
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_canApplyDiscountRule(checkout):
     checkout.addDiscount('a', 3, 2)
     checkout.addItem('a')
     checkout.addItem('a')
     checkout.addItem('a')
     assert checkout.calculateTotal() == 2
+
+def test_ExeptionWithBadItem(checkout):
+    with pytest.raises(Exception):
+        checkout.addItem('c')
